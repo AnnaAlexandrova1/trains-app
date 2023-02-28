@@ -1,11 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { getTrains, putSpeeds } from "./actions/getTrains";
+import { getTrains, putSpeeds } from "./api/requests";
 import "./App.css";
 import TrainsList from "./components/TrainsList/TrainsList";
 import TrainItem from "./components/TrainItem/TrainItem";
 import { SpeedItem } from "./components/TrainItem/TrainItem";
-import { Action } from "./actions/actions";
 
 export interface ITrains {
   name: string;
@@ -17,12 +16,6 @@ export interface ISpeedLimit {
   name: string;
   speedLimit: number;
 }
-
-// declare class PositiveNumberTag {
-//     private __kind: 'positiveNumber';
-// }
-
-// type PositiveNumber = number & PositiveNumberTag;
 
 function App() {
   const [trains, setTrains] = useState<Array<ITrains> | []>([]);
