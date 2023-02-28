@@ -29,9 +29,10 @@ const TrainItem = ({ speedLimits, onHandleInput }: SpeedLimitProps) => {
             {speedLimits.map((i, num) => {
                 return (
                       <div className="table__row">
-                      <div className="table__cell" key={num}>{i.name}</div>
-                        <div className="table__cell" key={(num + 1) * 1000}>
+                      <div className="table__cell" key={i.name + num+1}>{i.name}</div>
+                        <div className="table__cell" key={i.name + (num + 1) * 1500}>
                             <input
+                                key={i.name + (num + 1) * 2500}
                               onChange={(e) => onHandleInput(e, i.name)}
                               value={i.speedLimit}
                               type="number"

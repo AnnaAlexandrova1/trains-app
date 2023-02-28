@@ -55,6 +55,11 @@ function App() {
       return
     }
 
+    if (+e.target.value===0) {
+      alert('Только целые числа больше 0')
+      return
+    }
+
     setSpeedLimitList(speedLimitList.map((item) => {
       if (item.name === i) {
         return {
@@ -76,7 +81,8 @@ function App() {
       description: desc,
       speedLimits: sortArr
     }
-      console.log(data)
+    console.log('Отправка данных на сервер:')
+    console.log(data)
       putSpeeds(data)
   }
 

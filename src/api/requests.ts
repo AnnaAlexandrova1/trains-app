@@ -13,12 +13,12 @@ export const getTrains = async () => {
   return await res.json();
 };
 
-
+// запрос не верный! Нужен токен авторизации. И вообще нужен PUT запрос, но к нему тоже нужен доп. доступ
 export const putSpeeds = async (data: ITrains) => {
   try {
       const response = await fetch(url, {
       mode: 'no-cors',
-      method: "PUT",
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
@@ -27,11 +27,14 @@ export const putSpeeds = async (data: ITrains) => {
     });
 
     if (!response.ok) {
-      throw new Error(`Error! status: ${response.status}`);
+      throw new Error(`Error! ${response.json}`);
+    }
+    if (response.ok) {
+      console.log(response.status)
     }
   } catch (error) {
     if (error instanceof Error) {
-      console.log("error message: ", error.message);
+      console.log("error message: ", error.name);
       return error.message;
     } else {
       console.log("unexpected error: ", error);
