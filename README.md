@@ -3,7 +3,7 @@
 [Реализация на GitHubPages]()
 
 ИЛИ
-### `git clone `
+### `git clone https://github.com/AnnaAlexandrova1/trains-app.git`
 
 ### `npm i`
 
