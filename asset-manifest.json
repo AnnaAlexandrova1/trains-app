@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/trains-app/static/css/main.deac3db7.css",
+    "main.js": "/trains-app/static/js/main.bf920a41.js",
+    "static/js/787.28cb0dcd.chunk.js": "/trains-app/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/trains-app/index.html",
+    "main.deac3db7.css.map": "/trains-app/static/css/main.deac3db7.css.map",
+    "main.bf920a41.js.map": "/trains-app/static/js/main.bf920a41.js.map",
+    "787.28cb0dcd.chunk.js.map": "/trains-app/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.deac3db7.css",
+    "static/js/main.bf920a41.js"
+  ]
+}
